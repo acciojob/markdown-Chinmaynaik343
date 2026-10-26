@@ -1,12 +1,81 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
-    }
-    
 
-button{
-    color: #27aedb;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.editor-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.editor-section,
+.preview-section {
+  flex: 1;
+  min-width: 0;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.editor-section h2,
+.preview-section h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.textarea {
+  width: 100%;
+  height: 65vh;
+  padding: 12px;
+  resize: vertical;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.preview {
+  min-height: 65vh;
+  padding: 12px;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
+
+.preview img {
+  max-width: 100%;
+}
+
+.loading {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .editor-container {
+    flex-direction: column;
+  }
+
+  .textarea {
+    height: 300px;
+  }
+
+  .preview {
+    min-height: 300px;
+  }
 }
