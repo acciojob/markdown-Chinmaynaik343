@@ -1,7 +1,7 @@
 
 import React from "react";
 import MarkdownEditor from "./MarkdownEditor";
-import "./styles.css";
+import "./styles/App.css";
 
 function App() {
   return (
